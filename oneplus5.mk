@@ -231,7 +231,8 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oneplus.rc \
     init.target.rc \
-    init.radio.sh
+    init.radio.sh \
+    ueventd.oneplus.rc
 
 # Keyboard
 PRODUCT_COPY_FILES += \
