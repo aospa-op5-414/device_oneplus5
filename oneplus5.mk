@@ -182,10 +182,12 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl:64 \
-    android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey \
-    libops
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
@@ -396,8 +398,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Verity
-PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
-$(call inherit-product, build/target/product/verity.mk)
+#PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+#$(call inherit-product, build/target/product/verity.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
