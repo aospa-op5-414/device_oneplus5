@@ -321,9 +321,6 @@ on post-fs-data
     # Generate wifi mac
     start vendor.wifi-mac-generator
 
-    # Generate bt mac
-    start vendor.bt-mac-generator
-
     # For oneplus camera hal
     mkdir /data/misc/camera 775 system system
     write /data/misc/camera/client_package_name "com.oneplus.camera"
@@ -465,6 +462,9 @@ on boot
     # init.qcom.sh
     write /proc/sys/net/ipv6/conf/default/accept_ra_defrtr 1
 
+    # Set device properties
+    setprop sys.usb.controller "a800000.dwc3"
+
 on charger
     start dashd
     setprop sys.usb.configfs 1
@@ -540,12 +540,12 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
-service dashd /vendor/xbin/dashd
-     class core
-     critical
-     seclabel u:r:dashd:s0
-     group root system
-     writepid /dev/cpuset/system-background/tasks
+#service dashd /vendor/xbin/dashd
+#    class core
+#    critical
+#    seclabel u:r:dashd:s0
+#    group root system
+#    writepid /dev/cpuset/system-background/tasks
 
 service init-devstart-sh /vendor/bin/init.devstart.sh
     class core
@@ -581,14 +581,6 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
-
-service vendor.bt-mac-generator /vendor/bin/bt-mac-generator
-    class main
-    user bluetooth
-    group bluetooth
-    oneshot
-    disabled
-    seclabel u:r:bt_mac_generator:s0
 
 service vendor.cnss-daemon /vendor/bin/cnss-daemon -n -l
     class late_start
