@@ -386,6 +386,9 @@ vendor/lib/libchromatix_imx398_3a_wechat_preview.so
 vendor/lib/libchromatix_imx398_isp_zsl_snapshot.so
 vendor/lib/libchromatix_imx398_preview_1080p_cpp.so
 
+# Charger - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/bin/hvdcp_opti|e5034d57f899b0759e6c23443afe557f86ee3a09
+
 # CNE - from LA.UM.9.12.r1-10800-SMxx50.0
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
@@ -658,6 +661,9 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib/hw/keystore.msm8998.so
 vendor/lib64/hw/keystore.msm8998.so
 
+# Latency - from LA.UM.9.12.r1-10800-SMxx50.0
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
+
 # Listen
 lib/liblistenjni.so:vendor/lib/liblistenjni.so
 lib/liblistensoundmodel2.so:vendor/lib/liblistensoundmodel2.so
@@ -669,6 +675,7 @@ vendor/lib/libsmwrapper.so
 # Media
 lib/libmmosal.so
 lib64/libmmosal.so
+lib64/extractors/libmmparserextractor.so:system_ext/lib64/extractors/libmmparserextractor.so
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
 vendor/lib/libFlacSwDec.so
@@ -721,18 +728,12 @@ vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 
-# MM OSAL - from LA.UM.9.12.r1-10800-SMxx50.0
-vendor/lib/libmmosal.so
-vendor/lib64/libmmosal.so
+# MM OSAL - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
+vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 
 # NFC
 vendor/lib/libpn553_fw.so
-
-# NXP - ESE-Powermanager
-vendor/lib64/ese_client.so
-vendor/lib64/ese_spi_nxp.so
-vendor/lib64/ls_client.so
-vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 
 # PD - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/pd-mapper
@@ -1009,6 +1010,12 @@ vendor/lib64/vendor.qti.hardware.limits@1.0.so
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Universal Bandwidth Compression (UBWC) - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/libstreamparser.so|5f6d72017b1aa1ae457f6de54b8c101568e22cb8
+vendor/lib/libUBWC.so|30dd8962cb8ab5bf5caeff2f74e3639691c0e6fe
+vendor/lib64/libstreamparser.so|8ccb6cfc28decef9b13b392713fd9e76ceb97764
+vendor/lib64/libUBWC.so|5b9ac103bde9ffc8384f34384d8552e5c44d5725
 
 # Wi-Fi
 vendor/bin/cnss-daemon
