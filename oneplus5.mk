@@ -306,7 +306,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     seccomp \
-    telephony
+    telephony \
+    vibrator
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -360,10 +361,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Verity
 #PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 #$(call inherit-product, build/target/product/verity.mk)
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
 
 # VNDK
 # Update this list with what each blob is actually for
