@@ -674,6 +674,13 @@ service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
+service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
@@ -708,11 +715,3 @@ service vendor.time_daemon /vendor/bin/time_daemon
     group system
     capabilities SYS_TIME
     writepid /dev/cpuset/system-background/tasks
-
-service vendor.wifi-mac-generator /vendor/bin/wifi-mac-generator
-    class main
-    user wifi
-    group wifi
-    oneshot
-    disabled
-    seclabel u:r:wifi_mac_generator:s0
