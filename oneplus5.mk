@@ -287,6 +287,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     seccomp \
     telephony \
     vibrator \
+    wfd-legacy \
     wlan
 
 # Recovery
