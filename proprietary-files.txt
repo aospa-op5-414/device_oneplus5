@@ -386,7 +386,7 @@ vendor/lib/libchromatix_imx398_3a_wechat_preview.so
 vendor/lib/libchromatix_imx398_isp_zsl_snapshot.so
 vendor/lib/libchromatix_imx398_preview_1080p_cpp.so
 
-# Charger - from LA.UM.9.6.2.r1-03600-89xx.0
+# Charger - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hvdcp_opti|e5034d57f899b0759e6c23443afe557f86ee3a09
 
 # CNE - from LA.UM.9.12.r1-10800-SMxx50.0
@@ -664,26 +664,21 @@ vendor/lib64/hw/keystore.msm8998.so
 # Latency - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 
-# Listen
-lib/liblistenjni.so:vendor/lib/liblistenjni.so
-lib/liblistensoundmodel2.so:vendor/lib/liblistensoundmodel2.so
+# Listen - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/lib/hw/sound_trigger.primary.msm8998.so
 vendor/lib/libadpcmdec.so
-vendor/lib/libmulawdec.so
-vendor/lib/libsmwrapper.so
-
-# Misc
-vendor/etc/graphite_ipc_platform_info.xml
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
+vendor/lib/libsmwrapper.so
+vendor/lib64/hw/sound_trigger.primary.msm8998.so
 vendor/lib64/libgcs-calwrapper.so
 vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 
-# MM OSAL - from LA.UM.9.6.2.r1-03600-89xx.0
+# MM OSAL - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/lib/libmmosal.so|e23d6d1b2a035c08ffd7ac72d5241ebff37f0d14
 vendor/lib64/libmmosal.so|e9fdb48163e92b089cea0c397723a8416436c272
 
@@ -700,7 +695,7 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# PowerOffAlarm - from LA.UM.9.6.2.r1-03600-89xx.0
+# PowerOffAlarm - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -826,7 +821,7 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 vendor/radio/qcril_database/qcril.db
 
-# QSEECOM - from LA.UM.9.6.2.r1-03600-89xx.0
+# QSEECOM - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
 vendor/bin/qseecomd
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
@@ -840,7 +835,7 @@ vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
-# QTEE - from LA.UM.9.6.2.r1-03600-89xx.0
+# QTEE - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -864,7 +859,7 @@ vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# SecureMSM (SECDISP) - from LA.UM.9.6.2.r1-03600-89xx.0
+# SecureMSM (SECDISP) - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
 vendor/lib64/libSecureUILib.so
@@ -875,7 +870,7 @@ vendor/lib64/libsi.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# SecureMSM - from LA.UM.9.6.2.r1-03600-89xx.0
+# SecureMSM - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
 vendor/lib64/libbase64.so
@@ -960,7 +955,7 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Universal Bandwidth Compression (UBWC) - from LA.UM.9.6.2.r1-03600-89xx.0
+# Universal Bandwidth Compression (UBWC) - from LA.UM.9.6.2.r1-04100-89xx.0
 vendor/lib/libstreamparser.so|5f6d72017b1aa1ae457f6de54b8c101568e22cb8
 vendor/lib/libUBWC.so|30dd8962cb8ab5bf5caeff2f74e3639691c0e6fe
 vendor/lib64/libstreamparser.so|8ccb6cfc28decef9b13b392713fd9e76ceb97764
