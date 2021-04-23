@@ -1,0 +1,115 @@
+# Copyright (C) 2021 Paranoid Android
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on boot
+
+    # TP Firmware
+    write /sys/bus/i2c/devices/5-0020/tp_fw_update 0
+
+    # Fingerprint
+    chmod 0664 /sys/devices/soc/soc:fpc_fpc1020/irq
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/irq
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/report_home
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/report_home
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/report_key
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/report_key
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/update_info
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/update_info
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/screen_state
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/screen_state
+    chmod 0660 /sys/devices/soc/soc:fingerprint_detect/sensor_version
+    chown system system /sys/devices/soc/soc:fingerprint_detect/sensor_version
+    chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/hw_reset
+    chown system system /sys/devices/soc/soc:fpc_fpc1020/hw_reset
+    #chmod 0660 /sys/devices/soc/soc:fpc_fpc1020/wakeup_enable
+    #chown system system /sys/devices/soc/soc:fpc_fpc1020/wakeup_enable
+    chmod 0666 /dev/qseecom
+    #liuyan 2017/7/27 add for goodix fp
+    chmod 0666 /dev/goodix_fp
+
+    # Lights
+    chown system system /sys/class/leds/red/pause_lo
+    chown system system /sys/class/leds/blue/pause_lo
+    chown system system /sys/class/leds/green/pause_lo
+    chown system system /sys/class/leds/red/pause_hi
+    chown system system /sys/class/leds/blue/pause_hi
+    chown system system /sys/class/leds/green/pause_hi
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/red/ramp_step_ms
+    chmod 660 /sys/class/leds/red/ramp_step_ms
+    chown system system /sys/class/leds/blue/ramp_step_ms
+    chmod 660 /sys/class/leds/blue/ramp_step_ms
+    chown system system /sys/class/leds/green/ramp_step_ms
+    chmod 660 /sys/class/leds/green/ramp_step_ms
+    chown system system /sys/class/leds/red/duty_pcts
+    chmod 660 /sys/class/leds/red/duty_pcts
+    chown system system /sys/class/leds/blue/duty_pcts
+    chmod 660 /sys/class/leds/blue/duty_pcts
+    chown system system /sys/class/leds/green/duty_pcts
+    chmod 660 /sys/class/leds/green/duty_pcts
+    chmod 666 /sys/class/leds/red/brightness
+    chmod 666 /sys/class/leds/green/brightness
+    chmod 666 /sys/class/leds/blue/brightness
+    chown system system /sys/class/leds/led:torch_0/brightness
+    chmod 666 /sys/class/leds/led:torch_0/brightness
+    chown system system /sys/class/leds/led:torch_1/brightness
+    chmod 666 /sys/class/leds/led:torch_1/brightness
+    chown system system /sys/class/leds/led:switch_0/brightness
+    chmod 666 /sys/class/leds/led:switch_0/brightness
+
+on post-fs
+    # Haptics
+    chown system system /sys/class/timed_output/vibrator/vmax_mv
+    chown system system /sys/class/timed_output/vibrator/wf_s0
+    chown system system /sys/class/timed_output/vibrator/wf_s1
+    chown system system /sys/class/timed_output/vibrator/wf_s2
+    chown system system /sys/class/timed_output/vibrator/wf_s3
+    chown system system /sys/class/timed_output/vibrator/wf_s4
+    chown system system /sys/class/timed_output/vibrator/wf_s5
+    chown system system /sys/class/timed_output/vibrator/wf_s6
+    chown system system /sys/class/timed_output/vibrator/wf_s7
+    chown system system /sys/class/timed_output/vibrator/wf_update
+    chown system system /sys/class/timed_output/vibrator/wf_rep
+    chown system system /sys/class/timed_output/vibrator/wf_s_rep
+    chown system system /sys/devices/soc/c179000.i2c/i2c-5/5-0020/tp_grip_ctrl
+    chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+    chown system system /sys/module/param_read_write/parameters/normal_reboot_count
+    chown system system /sys/module/param_read_write/parameters/abnormal_reboot_count
+    chown system system /sys/module/param_read_write/parameters/update_count
+    chown system system /sys/module/param_read_write/parameters/fastboot_count
+    chown system system /sys/class/power_supply/bms/set_allow_read_extern_fg_iic
+    chown system system /persist/sensors/registry/registry/tmd3725_platform.rgb.rfac_cal
+    chmod 660 /persist/sensors/registry/registry/tmd3725_platform.rgb.rfac_cal
+    chown system system /persist/sensors/registry/registry/tmd3725_platform.als.afac_cal
+    chmod 660 /persist/sensors/registry/registry/tmd3725_platform.als.afac_cal
+    chown system system /sys/class/leds/vibrator/vmax_mv
+    chmod 660 /sys/class/leds/vibrator/vmax_mv
+    #wangdongdong@MultiMediaService,2018/03/28,change the mode of the file
+    chmod 0664 /persist/spkr_calibration.bin
+    chown system system /sys/class/leds/vibrator/test_mode
+    chmod 660 /sys/class/leds/vibrator/test_mode
+    chown system system /sys/class/leds/vibrator/trigger
+    chown system system /sys/class/leds/vibrator/activate
+    chown system system /sys/class/leds/vibrator/brightness
+    chown system system /sys/class/leds/vibrator/duration
+    chown system system /sys/class/leds/vibrator/state
+
+service vendor.init-radio-sh /vendor/bin/init.radio.sh
+    class late_start
+    user root
+    group root system radio
+    oneshot
+    writepid /dev/cpuset/system-background/tasks

@@ -227,13 +227,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=1
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
-    $(LOCAL_PATH)/rootdir/etc/init.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.devstart.sh \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.qcom.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.usb.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.radio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.radio.sh \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.oneplus.rc \
+    init.target.rc \
+    init.radio.sh
 
 # Keyboard
 PRODUCT_COPY_FILES += \
@@ -296,12 +294,14 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     display \
     gps \
+    init \
     media-legacy \
     nq-nfc \
     overlay \
     perf \
     seccomp \
     telephony \
+    usb \
     vibrator \
     wfd-legacy \
     wlan
@@ -309,11 +309,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
 # QSPM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qspm.enable=true
-
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.usb.rc:root/init.recovery.qcom.usb.rc
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
@@ -349,10 +344,6 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
 
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
