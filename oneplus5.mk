@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
     init.oneplus.rc \
     init.target.rc \
     init.radio.sh \
+    init.qcom.sensors.sh \
     ueventd.oneplus.rc
 
 # Keyboard
@@ -277,7 +278,7 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf
+    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
@@ -308,8 +309,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan
 
 # QSPM
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qspm.enable=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.vendor.qspm.enable=true
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

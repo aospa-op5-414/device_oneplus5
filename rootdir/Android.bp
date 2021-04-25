@@ -15,26 +15,39 @@
 
 prebuilt_etc {
     name: "fstab.qcom",
-    src: "fstab.qcom",
+    src: "etc/fstab.qcom",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.oneplus.rc",
-    src: "init.oneplus.rc",
+    src: "etc/init.oneplus.rc",
     sub_dir: "init",
     vendor: true,
 }
 
 prebuilt_etc {
     name: "init.target.rc",
-    src: "init.target.rc",
+    src: "etc/init.target.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
 
 sh_binary {
     name: "init.radio.sh",
-    src: "init.radio.sh",
+    src: "bin/init.radio.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors.sh",
+    src: "bin/init.qcom.sensors.sh",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.oneplus.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.oneplus.rc",
     vendor: true,
 }
