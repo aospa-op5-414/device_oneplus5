@@ -15,5 +15,5 @@
 runtime_resource_overlay {
     name: "OnePlus5SeriesFrameworks",
     sdk_version: "current",
-    device_specific: true,
+    vendor: true,
 }

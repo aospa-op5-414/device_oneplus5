@@ -162,4 +162,4 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VNDK_VERSION := current
 
 # inherit from the proprietary version
--include vendor/oneplus/msm8998-common/BoardConfigVendor.mk
+-include vendor/oneplus/oneplus5/BoardConfigVendor.mk
