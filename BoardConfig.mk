@@ -114,7 +114,9 @@ TARGET_HW_DISK_ENCRYPTION := true
 LOC_HIDL_VERSION := 4.0
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += \
+    $(PLATFORM_PATH)/manifest.xml \
+    $(PLATFORM_PATH)/oneplus_manifest.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(PLATFORM_PATH)/oneplus_vendor_framework_compatibility_matrix.xml \
@@ -143,10 +145,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_msm
 BOARD_HAS_LARGE_FILESYSTEM := true
-
-# RIL
-TARGET_RIL_VARIANT := caf
-TARGET_USES_OLD_MNC_FORMAT := true
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp
