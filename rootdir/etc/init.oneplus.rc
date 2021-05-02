@@ -113,3 +113,10 @@ service vendor.init-radio-sh /vendor/bin/init.radio.sh
     group root system radio
     oneshot
     writepid /dev/cpuset/system-background/tasks
+
+service vendor.rmt_storage /vendor/bin/rmt_storage
+    class core
+    user root
+    shutdown critical
+    ioprio rt 0
+    writepid /dev/cpuset/system-background/tasks 
