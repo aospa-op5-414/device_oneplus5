@@ -22,7 +22,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.oneplus.rc",
     src: "etc/init.oneplus.rc",
-    sub_dir: "init",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
