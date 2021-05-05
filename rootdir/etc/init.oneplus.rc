@@ -107,6 +107,9 @@ on post-fs
     chown system system /sys/class/leds/vibrator/duration
     chown system system /sys/class/leds/vibrator/state
 
+    write /mnt/vendor/persist/wlan_mac.bin ""
+    chown wifi wifi /mnt/vendor/persist/wlan_mac.bin
+
 service vendor.init-radio-sh /vendor/bin/init.radio.sh
     class late_start
     user root
