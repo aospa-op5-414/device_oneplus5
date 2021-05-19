@@ -172,17 +172,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/synaptics_s3320.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_s3320.kl \
     $(LOCAL_PATH)/keylayout/synaptics.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics.kl
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
-
-# Media Extensions
- PRODUCT_PACKAGES += \
-    libmediametrics \
-    libregistermsext \
-    mediametrics
-
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus5

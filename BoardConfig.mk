@@ -28,9 +28,6 @@ PLATFORM_PATH := device/oneplus/oneplus5
 
 BOARD_VENDOR := oneplus
 
-# we are too big to fit in
-PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
-
 # Compile libhwui in performance mode
 HWUI_COMPILE_FOR_PERF := true
 
@@ -103,9 +100,6 @@ DEVICE_MANIFEST_FILE += \
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(PLATFORM_PATH)/oneplus_vendor_framework_compatibility_matrix.xml \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
-# Keystore
-TARGET_PROVIDES_KEYMASTER := true
-
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
@@ -123,8 +117,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
-#TARGET_RECOVERY_UI_LIB := librecovery_ui_msm
-BOARD_HAS_LARGE_FILESYSTEM := true
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp

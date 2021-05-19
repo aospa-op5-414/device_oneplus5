@@ -519,10 +519,6 @@ vendor/lib64/fp_hal_extension.so
 vendor/lib64/vendor.oneplus.fingerprint.extension@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.msm8998.so
-vendor/lib64/hw/gatekeeper.msm8998.so
-
 # GPS - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/bin/garden_app
 vendor/bin/loc_launcher
@@ -645,17 +641,16 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
-# Keymaster
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libkeymasterprovision.so
-vendor/lib/libkeymasterutils.so
+# Keymaster - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
-
-# Keystore
-vendor/lib/hw/keystore.msm8998.so
-vendor/lib64/hw/keystore.msm8998.so
+vendor/lib64/libqtikeymaster4.so
 
 # Latency - from LA.UM.9.12.r1-10800-SMxx50.0
 vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
