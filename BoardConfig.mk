@@ -28,9 +28,6 @@ PLATFORM_PATH := device/oneplus/oneplus5
 
 BOARD_VENDOR := oneplus
 
-# Compile libhwui in performance mode
-HWUI_COMPILE_FOR_PERF := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msm8998
 TARGET_NO_BOOTLOADER := true
@@ -70,15 +67,8 @@ TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 TARGET_USES_UNCOMPRESSED_KERNEL := false
 
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
-
-# Camera
-USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
