@@ -83,7 +83,7 @@ on early-boot
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
-    start rmt_storage
+    start vendor.rmt_storage
     start rfs_access
     write /dev/cpuset/top-app/cpus 0-3
     write /dev/cpuset/foreground/cpus 0-3
@@ -122,6 +122,10 @@ on boot
    chown system system /persist/speccfg/vendor_persist.prop
    chown system system /persist/speccfg/submask
    chown system system /persist/speccfg/partition
+
+    # Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
+    chown root radio /proc/cmdline
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"

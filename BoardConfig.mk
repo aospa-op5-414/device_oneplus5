@@ -108,13 +108,11 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery.fstab
 
-# Root
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/dsp:/dsp
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/bt_firmware:/bt_firmware
-BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
-BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
-
+# SEPolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(PLATFORM_PATH)/sepolicy/private
+
+# Symlinks
+TARGET_MOUNT_POINTS_SYMLINKS := true
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
