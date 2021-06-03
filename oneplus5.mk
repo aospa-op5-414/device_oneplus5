@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oneplus.rc \
     init.target.rc \
-    init.class_main.sh \
     init.radio.sh \
     init.qcom.sensors.sh \
     ueventd.oneplus.rc
