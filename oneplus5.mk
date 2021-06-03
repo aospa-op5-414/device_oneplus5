@@ -32,8 +32,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     FrameworksResTarget \
     OnePlus5SeriesFrameworks \
-    WifiResTarget \
-    CarrierConfigRes
+    WifiResTarget
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -155,6 +154,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oneplus.rc \
     init.target.rc \
+    init.class_main.sh \
     init.radio.sh \
     init.qcom.sensors.sh \
     ueventd.oneplus.rc

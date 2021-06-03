@@ -34,6 +34,12 @@ prebuilt_etc {
 }
 
 sh_binary {
+    name: "init.class_main.sh",
+    src: "bin/init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.radio.sh",
     src: "bin/init.radio.sh",
     vendor: true,
