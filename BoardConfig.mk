@@ -74,12 +74,6 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/msm8998
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
-
 # Display
 TARGET_SCREEN_DENSITY := 420
 
