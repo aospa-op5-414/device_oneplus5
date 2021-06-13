@@ -40,12 +40,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qti.qseecomd.sh",
-    src: "bin/init.qti.qseecomd.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.sensors.sh",
     src: "bin/init.qcom.sensors.sh",
     vendor: true,
