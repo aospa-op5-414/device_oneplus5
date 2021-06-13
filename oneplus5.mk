@@ -88,9 +88,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml 
 
+# Charging
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.charger.enable_suspend=1
+
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
+# Config Store
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -155,6 +163,7 @@ PRODUCT_PACKAGES += \
     init.oneplus.rc \
     init.target.rc \
     init.radio.sh \
+    init.qti.qseecomd.sh \
     init.qcom.sensors.sh \
     ueventd.oneplus.rc
 
@@ -165,6 +174,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/synaptics_s3320.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_s3320.kl \
     $(LOCAL_PATH)/keylayout/synaptics.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics.kl
+
+# Keymaster
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.volume.filenames_mode = "aes-256-cts" \
+    ro.crypto.dm_default_key.options_format.version = 2 \
+    ro.crypto.volume.metadata.method=dm-default-key \
+    ro.crypto.allow_encrypt_override = true \
+    ro.hardware.keystore_desede=true
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
