@@ -174,6 +174,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/synaptics_s3320.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_s3320.kl \
     $(LOCAL_PATH)/keylayout/synaptics.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service \
+    android.hardware.keymaster@4.0
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/oneplus/oneplus5
